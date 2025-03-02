@@ -6,8 +6,8 @@ Statyczna strona internetowa naszego koła naukowego oparta na frameworku Next.j
 
 1. **Sklonuj repozytorium**:
    ```sh
-   git clone https://github.com/twoja-nazwa-uzytkownika/nazwa-repozytorium.git
-   cd nazwa-repozytorium
+   git clone https://github.com/BioAddMed/BioAddMed-Website.git
+   cd bioaddmed-website
    ```
 
 2. **Zainstaluj zależności** (po każdym `git pull` warto to powtórzyć, aby mieć najnowsze paczki):
@@ -26,7 +26,7 @@ Aby uruchomić środowisko deweloperskie z automatycznym odświeżaniem zmian:
    ```sh
    npm run dev
    ```
-Po uruchomieniu aplikacja będzie dostępna pod adresem: [http://localhost:3000](http://localhost:3000).
+Po uruchomieniu aplikacja domyslnie będzie dostępna pod adresem: [http://localhost:3000](http://localhost:3000).
 
 ### Budowanie i uruchamianie wersji produkcyjnej
 1. **Zbudowanie aplikacji**:
