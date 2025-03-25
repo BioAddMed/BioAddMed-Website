@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "BioAddMed",
-  description: "BioAddMed to koło naukowe działjące na Wydziale Mechanicznym Politechniki Wrocławskiej zajmujące się drukiem 3D w medycynie",
+  description: "BioAddMed to koło naukowe działające na Wydziale Mechanicznym Politechniki Wrocławskiej zajmujące się drukiem 3D w medycynie",
 };
 
 export default function RootLayout({
@@ -24,9 +24,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="pl">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased w-screen`}
       >
         <Header/>
         {children}
