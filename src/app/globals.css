@@ -7,7 +7,7 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #2c4759;
+  --foreground: #ffffff;
   --bar: #2c4759;
   --text: #ffffff;
   --orange: #ff6f00;
@@ -15,7 +15,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #ffffff;
     --foreground: #2c4759;
     --bar: #ffffff;
     --text: #2c4759;
