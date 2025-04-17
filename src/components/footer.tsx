@@ -1,7 +1,7 @@
 function Footer() {
 
     return (
-        <header className="bg-[var(--bar)] py-3 pr-8 w-screen absolute bottom-0 flex -z-10 justify-between items-center">
+        <header className="bg-[var(--background)] py-3 pr-8 w-screen absolute bottom-0 flex -z-10 justify-between items-center border border-[var(--bar)]">
             <div className="text-[var(--text)] text-sm px-2 flex justify-between items-center w-max">
                 <img src="pwr_logotyp_beztla.png" alt="Logo Poliechniki Wrocławskiej" className="h-15 px-2" />
                 <img src="logo-w10.png" alt="Logo Wydziału Mechanicznego" className="h-15 px-2" />

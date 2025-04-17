@@ -1,7 +1,7 @@
 "use client"
 import { useState } from "react";
 import { NavElement } from "./navElement";
-
+//TODO: ROZWIĄZAĆ PROBLEM Z LOGIEM PRZY JASNYM MOTYWIE
 function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -37,7 +37,7 @@ function Header() {
                         <NavElement text="Aktualności" link="/Aktualnosci" onClick={() => setIsMenuOpen(false)} />
                         <NavElement text="Projekty" link="/Projekty" onClick={() => setIsMenuOpen(false)} />
                         <NavElement text="Współprace i sponsorzy" link="/Wspolprace" onClick={() => setIsMenuOpen(false)} />
-                        <NavElement text="Kontakt" link="#" onClick={() => setIsMenuOpen(false)} />
+                        <NavElement text="Kontakt" link="/Kontakt" onClick={() => setIsMenuOpen(false)} />
                     </nav>
                 </div>
                 <div className="h-0.5 bg-[var(--orange)] mt-1 w-[calc(100vw-15rem)] absolute bottom-3 right-1" />

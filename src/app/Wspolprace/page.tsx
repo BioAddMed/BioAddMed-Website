@@ -1,10 +1,10 @@
 "use client";
 import {JSX, useState} from "react";
-import Botland from "@/components/wspolprace/botland";
-import DPIN from "@/components/wspolprace/dpin";
-import PWR from "@/components/wspolprace/pwr";
-import Manus from "@/components/wspolprace/manus";
-import DCD3D from "@/components/wspolprace/dolnoslaskiecentrumdruku";
+import Botland from "@/components/wspolprace/Botland";
+import DPIN from "@/components/wspolprace/DPIN";
+import PWr from "@/components/wspolprace/PWr";
+import Manus from "@/components/wspolprace/Manus";
+import DCD3D from "@/components/wspolprace/DCD3D";
 import React from "react";
 
 
@@ -12,14 +12,12 @@ import React from "react";
 interface WspolpraceData{
     /*
     Interfejs WspolpraceData definiuje strukturę danych dla współprac. Zawiera
-    component, który jest renderowany w zależności od stanu isExpanded,
-    thumbnailImage, który jest używany do wyświetlenia miniatury (przed rozszerzeniem)
-    oraz expandedImage, który jest używany do wyświetlenia pełnego obrazu (po rozszerzeniu).
+    component, który jest renderowany w zależności od stanu isExpanded oraz
+    image, które są wyświetlane w zależności od stanu isExpanded.
      */
 
     component: (props: { isExpanded: boolean }) => JSX.Element | null;
-    thumbnailImage: string;
-    expandedImage: string;
+    image: string;
 }
 
 export default function Page() {
@@ -29,28 +27,23 @@ export default function Page() {
     const wspolprace: Record<string, WspolpraceData> = {
         Botland: {
             component: Botland,
-            thumbnailImage: "Botland-logo.png",
-            expandedImage: "Botland-logo.png",
+            image: "Botland-logo.png",
         },
         DPIN: {
             component: DPIN,
-            thumbnailImage: "dpin.png",
-            expandedImage: "dpin.png",
+            image: "dpin.png",
         },
         PWR: {
-            component: PWR,
-            thumbnailImage: "pwr_logotyp_beztla.png",
-            expandedImage: "pwr_logotyp_beztla.png",
+            component: PWr,
+            image: "pwr_logotyp_beztla.png",
         },
         Manus: {
             component: Manus,
-            thumbnailImage: "logo_2019_cz.webp",
-            expandedImage: "logo_2019_cz.webp",
+            image: "logo_2019_cz.webp",
         },
         DCD3D: {
             component: DCD3D,
-            thumbnailImage: "dcd3d.png",
-            expandedImage: "dcd3d.png",
+            image: "dcd3d.png",
         },
     };
 
@@ -58,22 +51,22 @@ export default function Page() {
     return (
         <div className="flex flex-col m-4 h-[calc(100vh-12rem)]">
             {!selectedWspolprace && (
-                <h1 className="text-3xl font-bold text-center mb-6 text-gray-800">
+                <h1 className="text-3xl font-bold text-center mb-6 text-[var(--text-cont)]">
                     Nasze Współprace
                 </h1>
             )}
 
             <div className="flex-grow flex flex-row">
                 {!selectedWspolprace ? (
-                    <div className="flex-grow grid grid-cols-3 gap-1 p-16 border rounded-lg bg-white overflow-auto">
+                    <div className="flex-grow grid grid-cols-3 gap-1 p-16 border rounded-lg bg-[var(--background)] overflow-auto">
                         {Object.entries(wspolprace).map(([name, data]) => (
                             <div
                                 key={name}
-                                className="cursor-pointer p-4 border rounded-lg bg-white"
+                                className="cursor-pointer p-4 border rounded-lg bg-[var(--background)]"
                                 onClick={() => setSelectedWspolprace(name)}
                             >
                                 <img
-                                    src={data.thumbnailImage}
+                                    src={data.image}
                                     alt={`${name} Thumbnail`}
                                     className="rounded-lg h-20 px-7"
                                 />
@@ -81,9 +74,9 @@ export default function Page() {
                         ))}
                     </div>
                 ) : (
-                    <div className="flex-grow p-4 mx-4 border rounded-lg bg-white overflow-auto">
+                    <div className="flex-grow p-4 mx-4 border rounded-lg bg-[var(--background)]">
                         <button
-                            className="mb-4 p-2 bg-gray-800 text-white rounded"
+                            className="mb-4 p-2 bg-[var(--icons)] text-[var(--background)] rounded-lg"
                             onClick={() => setSelectedWspolprace(null)}
                         >
                             Wróć
@@ -95,7 +88,7 @@ export default function Page() {
                                 })}
                             </div>
                             <img
-                                src={wspolprace[selectedWspolprace].expandedImage}
+                                src={wspolprace[selectedWspolprace].image}
                                 alt={`${selectedWspolprace} Logo`}
                                 className="rounded-lg max-h-[70vh]"
                             />
@@ -105,6 +98,5 @@ export default function Page() {
             </div>
         </div>
     );
-
 
 }
