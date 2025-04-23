@@ -10,6 +10,8 @@
   --foreground: #ffffff;
   --bar: #2c4759;
   --text: #ffffff;
+  --text-cont: #000000;
+  --icons: #102236;
   --orange: #ff6f00;
 }
 
@@ -19,6 +21,8 @@
     --foreground: #2c4759;
     --bar: #ffffff;
     --text: #2c4759;
+    --text-cont: #000000;
+    --icons: #102236;
     --orange: #ff6f00;
   }
 }

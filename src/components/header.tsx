@@ -1,7 +1,7 @@
 "use client"
 import { useState } from "react";
 import { NavElement } from "./navElement";
-
+//TODO: ROZWIĄZAĆ PROBLEM Z LOGIEM PRZY JASNYM MOTYWIE
 function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 

@@ -1,9 +1,9 @@
 function Footer() {
 
     return (
-        <header className="bg-[var(--bar)] py-3 pr-8 w-screen absolute bottom-0 flex -z-10 justify-between items-center">
+        <header className="bg-[var(--background)] py-3 pr-8 w-screen sticky bottom-0 flex z-10 justify-between items-center border border-[var(--bar)] mt-10">
             <div className="text-[var(--text)] text-sm px-2 flex justify-between items-center w-max">
-                <img src="logotypy-pwr.png" alt="Logo Poliechniki Wrocławskiej" className="h-15 px-2" />
+                <img src="pwr_logotyp_beztla.png" alt="Logo Poliechniki Wrocławskiej" className="h-15 px-2" />
                 <img src="logo-w10.png" alt="Logo Wydziału Mechanicznego" className="h-15 px-2" />
                 <img src="logo_2019_cz.webp" alt="Logo Fundacji Manus" className="h-15 px-2" />
                 <img src="Botland-logo.png" alt="Botland Logo" className="h-15 px-2" />
