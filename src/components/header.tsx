@@ -36,8 +36,8 @@ function Header() {
                     <nav className="flex flex-col md:flex-row md:space-x-6 text-[var(--text)] justify-end mb-2 md:mb-0 p-4">
                         <NavElement text="Aktualności" link="/Aktualnosci" onClick={() => setIsMenuOpen(false)} />
                         <NavElement text="Projekty" link="/Projekty" onClick={() => setIsMenuOpen(false)} />
-                        <NavElement text="Współprace i sponsorzy" link="#" onClick={() => setIsMenuOpen(false)} />
-                        <NavElement text="Kontakt" link="#" onClick={() => setIsMenuOpen(false)} />
+                        <NavElement text="Współprace i sponsorzy" link="/Wspolprace" onClick={() => setIsMenuOpen(false)} />
+                        <NavElement text="Kontakt" link="/Kontakt" onClick={() => setIsMenuOpen(false)} />
                     </nav>
                 </div>
                 <div className="h-0.5 bg-[var(--orange)] mt-1 w-[calc(100vw-15rem)] absolute bottom-3 right-1" />
