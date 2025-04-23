@@ -1,9 +1,6 @@
 "use client";
 import React from "react";
 
-//TODO: Poprawić lub USUNĄĆ DARK THEME
-
-
 import Adres from "@/components/kontakt/socjale/Adres";
 import Mail from "@/components/kontakt/socjale/Mail";
 import Facebook from "@/components/kontakt/socjale/Facebook";
@@ -20,9 +17,6 @@ export default function Page() {
             <h1 className="text-4xl font-bold text-[var(--text-cont)] mb-4">Kontakt</h1>
             <div className="flex flex-row flex-grow">
                 <div className="w-1/2 flex flex-col justify-start items-start space-y-4">
-                    <p className="text-lg text-[var(--text-cont)]">
-                        Jeśli masz pytania lub chcesz się z nami skontaktować, skorzystaj z poniższych danych kontaktowych.
-                    </p>
                     <div className="h-8"></div>
                     <div className="flex flex-col space-y-4">
                         <Adres />
