@@ -58,17 +58,17 @@ export default function Page() {
 
             <div className="flex-grow flex flex-row">
                 {!selectedWspolprace ? (
-                    <div className="flex-grow grid grid-cols-3 gap-1 p-16 border rounded-lg bg-[var(--background)] overflow-auto">
+                    <div className="flex-grow grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4 sm:p-8 md:p-16 border rounded-lg bg-[var(--background)] overflow-auto">
                         {Object.entries(wspolprace).map(([name, data]) => (
                             <div
                                 key={name}
-                                className="cursor-pointer p-4 border rounded-lg bg-[var(--background)]"
+                                className="cursor-pointer p-4 border rounded-lg bg-[var(--background)] flex flex-col items-center justify-center"
                                 onClick={() => setSelectedWspolprace(name)}
                             >
                                 <img
                                     src={data.image}
                                     alt={`${name} Thumbnail`}
-                                    className="rounded-lg h-20 px-7"
+                                    className="rounded-lg px-7"
                                 />
                             </div>
                         ))}
@@ -76,7 +76,7 @@ export default function Page() {
                 ) : (
                     <div className="flex-grow p-4 mx-4 border rounded-lg bg-[var(--background)]">
                         <button
-                            className="mb-4 p-2 bg-[var(--icons)] text-[var(--background)] rounded-lg"
+                            className="mb-4 p-2 px-3 bg-[var(--icons)] text-[var(--background)] rounded-lg cursor-pointer"
                             onClick={() => setSelectedWspolprace(null)}
                         >
                             Wróć
