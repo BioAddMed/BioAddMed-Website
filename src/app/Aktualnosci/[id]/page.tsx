@@ -1,15 +1,11 @@
 import { notFound } from "next/navigation";
 import artykulyData from "@/data/artykuly.json";
+import type { PageProps as NextPageProps } from "../../../../.next/types/app/Aktualnosci/[id]/page";
 
-type Params = {
-  params: {
-    id: string;
-  };
-};
-
-const ArtykulPage = ({ params }: Params) => {
+export default async function ArtykulPage({ params }: NextPageProps) {
+  const { id } = await params;
   const artykul = artykulyData.find(
-    (item) => item.id === parseInt(params.id)
+    (item) => item.id === parseInt(id, 10)
   );
 
   if (!artykul) {
@@ -24,9 +20,9 @@ const ArtykulPage = ({ params }: Params) => {
       ></div>
       <h1 className="text-3xl font-bold mb-2">{artykul.tytul}</h1>
       <p className="text-sm text-gray-500 mb-6">{artykul.data}</p>
-      <p className="text-lg text-gray-700 whitespace-pre-line">{artykul.pelnaTresc}</p>
+      <p className="text-lg text-gray-700 whitespace-pre-line">
+        {artykul.pelnaTresc}
+      </p>
     </div>
   );
-};
-
-export default ArtykulPage;
+}
