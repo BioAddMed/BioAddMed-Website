@@ -1,9 +1,11 @@
+import Image from "next/image";
+
 export default function Edugut() {
     return (
         <div className="flex flex-col space-y-4">
             <h2 className="text-xl font-bold flex-1">Edugut</h2>
             <div className="grid">
-                <img src="https://placehold.co/200x200" alt="Placeholder" className="rounded-lg m-10 mx-auto" />
+                <Image src="https://placehold.co/200x200" alt="Placeholder" className="rounded-lg m-10 mx-auto" />
                 <p>
                     Projekt „Edugut” jest realizowany we współpracy z KN „NEXUM” na Wydziale Medycznym. Celem projektu jest zaprojektowanie i wykonanie modelu treningowego do zespolenia jelita cienkiego, który jak najlepiej odzwierciedla budowę anatomiczną jelita grubego oraz jego właściwości mechaniczne. Kluczowym aspektem jest wydajność i opłacalność techniki wykonania, dlatego w procesie tym wykorzystujemy druk 3D.
                 </p>

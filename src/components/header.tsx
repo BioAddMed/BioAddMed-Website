@@ -1,4 +1,5 @@
 "use client"
+import Image from "next/image";
 import { useState } from "react";
 import { NavElement } from "./navElement";
 
@@ -8,7 +9,7 @@ function Header() {
     return (
         <header className="bg-[var(--bar)] py-3 pr-8 w-screen relative">
             <div className="flex items-center justify-between">
-                <img src="logo.png" alt="BioAddMed Logo" className="h-15 px-2" />
+                <Image src="logo.png" alt="BioAddMed Logo" className="h-15 px-2" />
                 <button
                     className="block md:hidden text-[var(--text)]"
                     onClick={() => setIsMenuOpen(!isMenuOpen)}
