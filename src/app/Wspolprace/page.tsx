@@ -6,6 +6,7 @@ import PWr from "@/components/wspolprace/PWr";
 import Manus from "@/components/wspolprace/Manus";
 import DCD3D from "@/components/wspolprace/DCD3D";
 import React from "react";
+import Image from "next/image"
 
 
 
@@ -65,7 +66,7 @@ export default function Page() {
                                 className="cursor-pointer p-4 border rounded-lg bg-[var(--background)] flex flex-col items-center justify-center"
                                 onClick={() => setSelectedWspolprace(name)}
                             >
-                                <img
+                                <Image
                                     src={data.image}
                                     alt={`${name} Thumbnail`}
                                     className="rounded-lg px-7"
@@ -87,7 +88,7 @@ export default function Page() {
                                     isExpanded: true,
                                 })}
                             </div>
-                            <img
+                            <Image
                                 src={wspolprace[selectedWspolprace].image}
                                 alt={`${selectedWspolprace} Logo`}
                                 className="rounded-lg max-h-[70vh]"

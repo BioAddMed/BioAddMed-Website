@@ -1,9 +1,10 @@
 import React from "react";
+import Image from "next/image"
 
 export default function Prezes(){
     return(
         <div className="flex flex-col items-center">
-            <img
+            <Image
                 src="https://placehold.co/150x150" //Zastąpić prawdziwym zdjęciem
                 alt="Prezes"
                 className="rounded-full mb-2"
