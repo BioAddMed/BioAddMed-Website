@@ -23,7 +23,7 @@ const [selectedProject, setSelectedProject] = useState("Franek 2.0");
     };
 
     return (
-        <div className="flex flex-row m-4 h-[calc(100vh-10rem)]">
+        <div className="flex flex-row m-4 h-[calc(100vh-12rem)]">
             <ListaProjektow onSelect={setSelectedProject} selectedProject={selectedProject} />
             <div className="flex-grow p-4 mx-4 border rounded-lg bg-gradient-to-r from-yellow-200 to-pink-300 w-max overflow-auto">
             {projektKomponenty[selectedProject]} {}
